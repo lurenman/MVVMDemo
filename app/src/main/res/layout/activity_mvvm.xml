@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--这块就是声明变量用的，跟class文件里的差不多-->
+    <data>
+
+        <variable
+            name="student"
+            type="com.example.lurenman.mvvmdemo.Student" />
+
+        <variable
+            name="sex"
+            type="String" />
+        <variable
+            name="teacher"
+            type="com.example.lurenman.mvvmdemo.Teacher"/>
+        <variable
+            name="controller"
+            type="com.example.lurenman.mvvmdemo.MvvmActivity.Controller"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{student.name}"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@{student.nickName}"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@{sex}"
+            android:textSize="17sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{teacher.name}"
+            android:textSize="17sp"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ceshi"
+            android:textSize="17sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="30dp"
+            android:onClick="@{controller.ceshi}"
+            />
+
+    </LinearLayout>
+
+</layout>
